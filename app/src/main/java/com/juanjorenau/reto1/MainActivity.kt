@@ -1,5 +1,6 @@
 package com.juanjorenau.reto1
 
+import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.CheckBox
 import android.widget.CompoundButton
+import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -36,5 +38,15 @@ class MainActivity : AppCompatActivity() {
         cbAndroid.setOnCheckedChangeListener(checkListener)
         cbReact.setOnCheckedChangeListener(checkListener)
         cbFlutter.setOnCheckedChangeListener(checkListener)
+
+        val swNotificaciones = findViewById<Switch>(R.id.swNotificaciones)
+        swNotificaciones.setTextColor(if (swNotificaciones.isChecked) Color.GREEN else Color.RED)
+        swNotificaciones.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                buttonView.setTextColor(Color.GREEN)
+            } else {
+                buttonView.setTextColor(Color.RED)
+            }
+        }
     }
 }
