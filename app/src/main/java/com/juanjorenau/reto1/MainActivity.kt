@@ -1,5 +1,6 @@
 package com.juanjorenau.reto1
 
+import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.os.Bundle
@@ -7,6 +8,9 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.CheckBox
 import android.widget.CompoundButton
+import android.widget.SeekBar
+import android.widget.Switch
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -36,5 +40,28 @@ class MainActivity : AppCompatActivity() {
         cbAndroid.setOnCheckedChangeListener(checkListener)
         cbReact.setOnCheckedChangeListener(checkListener)
         cbFlutter.setOnCheckedChangeListener(checkListener)
+
+        val swNotificaciones = findViewById<Switch>(R.id.swNotificaciones)
+        swNotificaciones.setTextColor(if (swNotificaciones.isChecked) Color.GREEN else Color.RED)
+        swNotificaciones.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                buttonView.setTextColor(Color.GREEN)
+            } else {
+                buttonView.setTextColor(Color.RED)
+            }
+        }
+
+        val tvNivel = findViewById<TextView>(R.id.tvNivelSeleccionado50)
+        val sbNivel = findViewById<SeekBar>(R.id.sbNivelSeleccionado50)
+
+        sbNivel.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                tvNivel.text = "Nivel seleccionado: $progress"
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        })
     }
 }
