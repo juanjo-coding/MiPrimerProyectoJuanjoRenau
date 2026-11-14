@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:clickable="true"
+        android:text="Profesional"
+        tools:layout_editor_absoluteX="258dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perro"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hámster"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="646dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="292dp"
+        android:layout_height="521dp"
+        app:srcCompat="@drawable/orange_cat"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="-50dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="289dp"
+        android:layout_height="202dp"
+        android:text="Miauricio Miaurtinez"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:backgroundTint="#4CAF50"
+        android:text="CONTRATAR"
+        app:iconTint="#2A4C9D"
+        app:rippleColor="#000000"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="569dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
